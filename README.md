@@ -1,34 +1,10 @@
-## YOLOV4：You Only Look Once目标检测模型在pytorch当中的实现
----
-
-**2021年2月7日更新：**   
-**加入letterbox_image的选项，关闭letterbox_image后网络的map得到大幅度提升。**
-
-## 目录
-1. [性能情况 Performance](#性能情况)
-2. [实现的内容 Achievement](#实现的内容)
-3. [所需环境 Environment](#所需环境)
-4. [注意事项 Attention](#注意事项)
-5. [小技巧的设置 TricksSet](#小技巧的设置)
-6. [文件下载 Download](#文件下载)
-7. [训练步骤 How2train](#训练步骤)
-8. [预测步骤 How2predict](#预测步骤)
-9. [评估步骤 How2eval](#评估步骤)
-10. [参考资料 Reference](#Reference)
-
-## 性能情况
-| 训练数据集 | 权值文件名称 | 测试数据集 | 输入图片大小 | mAP 0.5:0.95 | mAP 0.5 |
-| :-----: | :-----: | :------: | :------: | :------: | :-----: |
-| VOC07+12+COCO | [yolo4_voc_weights.pth](https://github.com/bubbliiiing/yolov4-pytorch/releases/download/v1.0/yolo4_voc_weights.pth) | VOC-Test07 | 416x416 | - | 89.0 
-| COCO-Train2017 | [yolo4_weights.pth](https://github.com/bubbliiiing/yolov4-pytorch/releases/download/v1.0/yolo4_weights.pth) | COCO-Val2017 | 416x416 | 46.1 | 70.2 
-
-
 ## 实现的内容
 - [x] 主干特征提取网络：DarkNet53 => CSPDarkNet53
 - [x] 特征金字塔：SPP，PAN
 - [x] 训练用到的小技巧：Mosaic数据增强、Label Smoothing平滑、CIOU、学习率余弦退火衰减
 - [x] 激活函数：使用Mish激活函数
-- [ ] ……balabla
+- [ ] APG
+- [ ] ALW
 
 ## 所需环境
 torch==1.2.0
